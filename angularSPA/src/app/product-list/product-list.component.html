@@ -1,0 +1,16 @@
+<h3>Products available in our online store:</h3>
+<ng-container *ngIf="!couldNotFindProducts">
+  <div *ngIf="products else loading" class="list-group">
+    <span *ngFor="let product of products" >    
+      <a [routerLink]="['/product-details', product.id]" >{{product.productName}}</a>
+    </span>
+  </div>
+
+  <ng-template #loading>
+    <div>Loading...</div>
+  </ng-template>
+</ng-container>
+
+<ng-container *ngIf="couldNotFindProducts">
+  <div>Oops! could not load the products, please re-visit later</div>
+</ng-container>

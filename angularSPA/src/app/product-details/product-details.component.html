@@ -1,0 +1,21 @@
+<ng-container *ngIf="!couldNotFindProduct">
+  <div *ngIf="selectedProduct else loading"  class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ selectedProduct.productName }}</h5>
+      <p class="card-text">Id: {{ selectedProduct.id }}</p>
+      <p class="card-text">Code: {{ selectedProduct.modelCode }}</p>
+      <p class="card-text">SerialNumber: {{ selectedProduct.serialNumber}}</p>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div>Loading...</div>
+  </ng-template>
+</ng-container>
+
+<ng-container *ngIf="couldNotFindProduct">
+  <div>This product could not be found</div>
+</ng-container>
+<br/>
+<a [routerLink]="['/product-list']" >Back to product list</a>
+
