@@ -7,10 +7,9 @@ To run the website:
 1. Open TestApi.sln in Visual Studio and run the code. The api should be available at http://localhost:50324/v1/products
 
 2. Open command prompt, navigate to angularSPA and run the below:
-
-a. npm i : to pull down the node packages, 
-b. npm start : to run ng server and start the server, 
-c. browse to http://localhost:4200/
+i. npm i : to pull down the node packages, 
+ii. npm start : to run ng server and start the server,
+iii. browse to http://localhost:4200/
 
 Vola!
 
